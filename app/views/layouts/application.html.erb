@@ -2,12 +2,23 @@
 <html>
 <head>
   <title>Classprojects</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application-all", media: "all" %>
+  <%# stylesheet_link_tag    "application", media: "all" %>
+  <!--[if lte IE 8]>
+    <%= stylesheet_link_tag "application-ie", :media => "all" %>
+  <![endif]-->
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+  <div id="header">
+    <div id="logo">
+      <img src="/assets/logo.png"/>
+    </div>
+    <h1 class="maintitle">School of Computing Term Project Showcase</h1>
+    <h2 class="subtitle">SR1/SR1 Foyer (COM1 Level 2) / 20 November 2012 (Tuesday) 18:00-22:00</h2>
+  </div>
   
   <div class="container">
     <%= yield %>
