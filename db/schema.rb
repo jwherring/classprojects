@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20130309174130) do
 
   create_table "projects", force: true do |t|
     t.string   "title"
-    t.string   "abstract"
+    t.text     "abstract"
     t.string   "website"
     t.integer  "class_id"
     t.datetime "created_at"
