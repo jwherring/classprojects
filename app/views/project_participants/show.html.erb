@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_participant.project %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project_participant.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_participant_path(@project_participant) %> |
+<%= link_to 'Back', project_participants_path %>
