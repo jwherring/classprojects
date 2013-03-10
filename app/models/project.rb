@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :project_participants 
+  has_many :users, through: :project_participants
   has_many :evaulations
   belongs_to :course
   before_destroy :ensure_not_referenced_by_any_project_participant
