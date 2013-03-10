@@ -1,4 +1,6 @@
 Classprojects::Application.routes.draw do
+  resources :user_roles
+
   resources :project_participants
 
   resources :roles
