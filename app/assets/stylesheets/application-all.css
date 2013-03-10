@@ -15,7 +15,12 @@
  div#header {
   background-color: rgb(238, 238, 238);
   height: 230px;
+  width: auto;
   padding: 20px 10px 10px 10px;
+ }
+
+ div#headerinner {
+  margin: auto;
  }
 
  div#logo {
@@ -25,12 +30,23 @@
 
  h1.maintitle {
   font-size: 60px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: rgb(51, 51, 51);
   font-weight: bold;
+  text-align: center;
  }
 
  h2.subtitle {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 200;
+  text-align: center;
+ }
+
+ div#maincontent {
+  padding: 10px;
+ }
+
+ div#leftcolumn {
+  padding: 10px;
  }
