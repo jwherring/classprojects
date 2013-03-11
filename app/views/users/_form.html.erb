@@ -15,18 +15,32 @@
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
+
   <div class="field">
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
+
   <div class="field">
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.text_field :password_confirmation %>
+  </div>
+
   <% Role.all.each do |rl| %>
     <%= label rl.role, rl.role %>
     <%= check_box_tag "user[roles][]", rl.id, @user.role_ids.include?(rl.id) %>
