@@ -6,7 +6,7 @@
       <th>Title</th>
       <th>Abstract</th>
       <th>Website</th>
-      <th>Class</th>
+      <th>Course</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,7 +19,7 @@
       <td><%= project.title %></td>
       <td><%= project.abstract %></td>
       <td><%= project.website %></td>
-      <td><%= project.course_id %></td>
+      <td><%= project.course.section %></td>
       <td><%= link_to 'Show', project %></td>
       <td><%= link_to 'Edit', edit_project_path(project) %></td>
       <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
