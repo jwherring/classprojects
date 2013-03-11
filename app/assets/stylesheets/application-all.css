@@ -80,3 +80,7 @@
  ul#leftmenu li a {
   text-decoration: none;
  }
+
+ .projecttitle {
+  font-size: 14px;
+ }
