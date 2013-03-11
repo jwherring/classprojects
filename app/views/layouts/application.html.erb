@@ -32,6 +32,9 @@
           <%= link_to "Sign up", new_user_path %> or 
           <%= link_to "Log in", new_session_path %>
         <% end %>
+        <% if is_admin %>
+          <%= "You have administrator privileges" %>
+        <% end %>
       </div>
     </div>
     <%= yield %>

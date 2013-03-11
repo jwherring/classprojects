@@ -12,6 +12,8 @@ private
   helper_method :current_user
 
   def is_admin
-    current_user.isadmin?
+    current_user.isadmin? if current_user
   end
+
+  helper_method :is_admin
 end
