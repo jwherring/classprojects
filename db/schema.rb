@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20130311081759) do
     t.string   "title"
     t.text     "abstract"
     t.string   "website"
-    t.integer  "class_id"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

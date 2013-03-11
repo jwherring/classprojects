@@ -14,6 +14,21 @@ Role.create(
   ]
 )
 
+User.create(
+  [
+    {
+      first_name: 'Joshua',
+      last_name: 'Herring'
+      email: 'mail1@mail.com'
+    },
+    {
+      first_name: 'Josh',
+      last_name: 'Harring'
+      email: 'mail2@mail.com'
+    }
+  ]
+)
+
 Course.create(
   [
     {
