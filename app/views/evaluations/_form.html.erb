@@ -11,10 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
+  <% if is_admin %>
+    <div class="field">
+      <%= f.label :user_id %><br />
+      <%= f.number_field :user_id %>
+    </div>
+  <% else %>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :project_id %><br />
     <%= f.number_field :project_id %>
