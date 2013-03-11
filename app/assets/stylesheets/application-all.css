@@ -61,6 +61,7 @@
 
  #notice {
   border: 1px solid;
+  text-align: center;
   background-color: rgb(238, 237, 237);
   margin: 20px;
  }
