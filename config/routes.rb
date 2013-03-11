@@ -1,4 +1,8 @@
 Classprojects::Application.routes.draw do
+  get "landing/index"
+
+  root to: 'landing#index'
+
   resources :user_roles
 
   resources :project_participants
