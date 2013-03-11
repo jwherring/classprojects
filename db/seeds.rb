@@ -27,6 +27,60 @@ User.create(
       last_name: 'User',
       email: 'mail2@mail.com',
       password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '1',
+      email: 'mail3@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '2',
+      email: 'mail4@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '3',
+      email: 'mail5@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '4',
+      email: 'mail6@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '5',
+      email: 'mail7@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '6',
+      email: 'mail8@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '7',
+      email: 'mail9@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '8',
+      email: 'mail10@mail.com',
+      password: 'test'
+    },
+    {
+      first_name: 'StudentUser',
+      last_name: '9',
+      email: 'mail11@mail.com',
+      password: 'test'
     }
   ]
 )
@@ -43,6 +97,42 @@ UserRole.create(
     },
     {
       user_id: 2,
+      role_id: 2
+    },
+    {
+      user_id: 3,
+      role_id: 2
+    },
+    {
+      user_id: 4,
+      role_id: 2
+    },
+    {
+      user_id: 5,
+      role_id: 2
+    },
+    {
+      user_id: 6,
+      role_id: 2
+    },
+    {
+      user_id: 7,
+      role_id: 2
+    },
+    {
+      user_id: 8,
+      role_id: 2
+    },
+    {
+      user_id: 9,
+      role_id: 2
+    },
+    {
+      user_id: 10,
+      role_id: 2
+    },
+    {
+      user_id: 11,
       role_id: 2
     }
   ]
