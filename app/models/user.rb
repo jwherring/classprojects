@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   def isadmin?
     my_roles = self.roles.map{ |rl| rl.role }
-    my_roles.include?(:administrator)
+    my_roles.include?("administrator")
   end
 
   def full_name
