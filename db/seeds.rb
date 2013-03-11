@@ -17,14 +17,33 @@ Role.create(
 User.create(
   [
     {
-      first_name: 'Joshua',
-      last_name: 'Herring',
-      email: 'mail1@mail.com'
+      first_name: 'Admin',
+      last_name: 'User',
+      email: 'mail1@mail.com',
+      password: 'test'
     },
     {
-      first_name: 'Josh',
-      last_name: 'Harring',
-      email: 'mail2@mail.com'
+      first_name: 'Student',
+      last_name: 'User',
+      email: 'mail2@mail.com',
+      password: 'test'
+    }
+  ]
+)
+
+UserRole.create(
+  [
+    {
+      user_id: 1,
+      role_id: 1
+    },
+    {
+      user_id: 1,
+      role_id: 2
+    },
+    {
+      user_id: 2,
+      role_id: 1
     }
   ]
 )
@@ -60,7 +79,7 @@ Project.create(
       abstract: 'Technology has changed the lives of billions. It has changed the way we track money, the way to do business and even the way we live our lives. There was a period, just a couple of decades ago where we wished we had more control over numerous aspects in life, and today, as technology advances, the gap between human and computer is shrinking and people are loving it.  In developing countries, the Internet and Mobile Internet penetration rates are rising, thus showing a huge opportunity in this area. Consumers in such areas are likely to adopt a higher standard of living and to enjoy more luxurious lifestyle, therefore, besides just satisfying their basic needs, it has to be done in the simplest, most convenient and with the best user experience ever.  There is a need in controlling the use of our daily electronic appliances. Consumers are paying for electricity that they did not use due to their carelessness, insensitivity to energy-consumptionor the inconvenience of turning off the switches one by one. Besides hurting their wallets, the environment is suffering as well.  The solution is a one-stop electrical appliance control and monitoring platform that is designed to fit its users’ lifestyles seamlessly. It consist of both hardware and software integration that encompasses a huge portion of the daily lives of millions of people living in both developing and developed cities.',
       website: '',
       course_id: 1
-    }.
+    },
     {
       title: 'Together we will make a better world',
       abstract: 'This app simplifies pick-up arrangements between friends through a simple iOS app. Drivers can put in pre-agreed pick-up points, and indicate the start of his journey. A push notification will be sent to the passenger when the driver departs, and when he is close to the pickup location. The passenger can likewise send a push notification to the driver when he (the passenger) is already waiting at the pickup point.',
