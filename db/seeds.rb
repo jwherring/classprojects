@@ -9,6 +9,7 @@
 
 Role.create(
   [
-    {},
+    {role: 'administrator'},
+    {role: 'student'}
   ]
 )
