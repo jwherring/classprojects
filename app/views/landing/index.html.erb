@@ -1,10 +1,22 @@
-<div id="leftcolumn" class="span-7">
+<div id="leftcolumn" class="span-5">
+  <%= render 'shared/menu' %>
 </div>
 
-<div id="maincontent" class="span-15 push-1">
-<% if notice %>
-  <div id="notice" class="span-13"><%= notice %></div>
-<% end %>
-<h1>Projects</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
+<div id="maincontent" class="span-17 push-2">
+  <% if notice %>
+    <div id="notice" class="span-13"><%= notice %></div>
+  <% end %>
+  <h1>Project Listings</h1>
+  <% Course.all.each do |cs| %>
+    <div>
+      <h2><%= cs.full_title %></h2>
+      <% cs.projects.each do |pj| %>
+        <div class="span-16 push-1">
+          <p>
+            <strong><span class="projecttitle"><%= link_to pj.title, project_path(pj.id) %></span></strong>  - <%= pj.abstract %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
