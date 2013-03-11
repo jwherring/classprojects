@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <% @user.roles.each do |rl| %>
+    <div>
+      <%= rl.id %>
+      <%= rl.role %>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -27,6 +33,10 @@
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
+  <% Role.all.each do |rl| %>
+    <%= label rl.role, rl.role %>
+    <%= check_box_tag "user[roles][]", rl.id, @user.role_ids.include?(rl.id) %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

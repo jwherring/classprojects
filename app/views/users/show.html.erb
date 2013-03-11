@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= debug(params) %>
 <p>
   <strong>First name:</strong>
   <%= @user.first_name %>
@@ -20,6 +21,10 @@
   <%= @user.location %>
 </p>
 
+<p>
+  <strong>Roles:</strong>
+  <%= @user.roles.map{ |rl| rl.role }.join(', ') %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

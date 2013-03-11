@@ -1,6 +1,6 @@
 class Role < ActiveRecord::Base
   has_many :user_roles
-  has_many :users, through: :user_roles
+  has_many :users, :through => :user_roles
   before_destroy :ensure_not_referenced_by_any_user
 end
 
