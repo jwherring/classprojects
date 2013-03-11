@@ -1,25 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div id="leftcolumn" class="span-7">
+<%= render 'shared/menu' %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<div id="maincontent" class="span-15 push-2">
+  <% if notice %>
+    <div id="notice"><%= notice %></div>
+  <% end %>
+  
+  <h1><%= @project.title %></h1>
+  
+  <div>
+    <%= @project.abstract %>
+  </div>
 
-<p>
-  <strong>Abstract:</strong>
-  <%= @project.abstract %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @project.website %>
-</p>
-
-<p>
-  <strong>Class:</strong>
-  <%= @project.class_id %>
-</p>
+  <div>
+  </div>
 
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Edit', edit_project_path(@project) %> |
+  <%= link_to 'Back', projects_path %>
+
+</div>

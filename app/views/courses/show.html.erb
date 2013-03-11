@@ -1,17 +1,20 @@
-<% if notice %>
-  <div id="notice"><%= notice %></div>
-<% end %>
+<div id="leftcolumn" class="span-7">
+<%= render 'shared/menu' %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+<div id="maincontent" class="span-15 push-2">
+  <% if notice %>
+    <div id="notice"><%= notice %></div>
+  <% end %>
+  
+  <h1><%= @course.full_title %></h1>
+  
+  <ul>
+  <% @course.projects.each do |pj| %>
+    <li><%= link_to pj.title, project_path(pj) %></li>
+  <% end %>
+  </ul>
 
-<p>
-  <strong>Section:</strong>
-  <%= @course.section %>
-</p>
-
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+  <%= link_to 'Back', courses_path %>
+</div>
