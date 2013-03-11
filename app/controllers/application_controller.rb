@@ -16,4 +16,8 @@ private
   end
 
   helper_method :is_admin
+
+  def authorize
+    redirect_to login_url if current_user.nil?
+  end
 end
