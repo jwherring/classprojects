@@ -18,12 +18,12 @@ User.create(
   [
     {
       first_name: 'Joshua',
-      last_name: 'Herring'
+      last_name: 'Herring',
       email: 'mail1@mail.com'
     },
     {
       first_name: 'Josh',
-      last_name: 'Harring'
+      last_name: 'Harring',
       email: 'mail2@mail.com'
     }
   ]
@@ -34,6 +34,10 @@ Course.create(
     {
       title: 'Software Development on Evolving Platforms',
       section: 'CS 3216'
+    },
+    {
+      title: 'Game Development',
+      section: 'CS 4213'
     }
   ]
 )
@@ -44,5 +48,6 @@ Project.create(
     abstract: 'JFDI Academy was originally developed for the CS1101S course to teach programming through gamification. Students are given programming goals to achieve, and they level up through these goals to be able to bigger and more fulfilling challenges. JFDI Academy was recently taken up by a geography teacher in a government secondary school and he has found it to be extremely effective in engaging troubled students, resulting in significant improvements to their grades. Unfortunately JFDI Academy in its current form requires significant hacking and customization to the source code, making it unsuitable for teachers with little technical background. The objective of this project is to produce a simplified JFDI Academy system that non-technically inclined teachers can customize and deploy to their students.',
     website: '',
     course_id: 1 
+    }
   ]
 )
