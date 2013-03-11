@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.text :abstract
       t.string :website
-      t.integer :class_id
+      t.integer :course_id
 
       t.timestamps
     end
