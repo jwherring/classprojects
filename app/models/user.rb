@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
   has_many :evaulations, dependent: :destroy
   accepts_nested_attributes_for :user_roles, :allow_destroy => true
   validates_uniqueness_of :email
+  has_secure_password
 end
