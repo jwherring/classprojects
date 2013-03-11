@@ -1,4 +1,5 @@
 Classprojects::Application.routes.draw do
+  get "sessions/new"
   get "landing/index"
 
   root to: 'landing#index'
