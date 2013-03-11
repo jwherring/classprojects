@@ -25,7 +25,11 @@
   <div class="container">
     <div id="loginheader" class="span-24">
       <div id="logintaskbar" class="span-4 push-20">
-        <%= link_to "Sign up", new_user_path %>
+        <% if current_user %>
+          <%= link_to "Log out", new_user_path %>
+        <% else %>
+          <%= link_to "Sign up", new_user_path %>
+        <% end %>
       </div>
     </div>
     <%= yield %>
