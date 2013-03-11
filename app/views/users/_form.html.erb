@@ -11,12 +11,6 @@
     </div>
   <% end %>
 
-  <% @user.roles.each do |rl| %>
-    <div>
-      <%= rl.id %>
-      <%= rl.role %>
-    </div>
-  <% end %>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
