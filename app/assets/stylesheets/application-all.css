@@ -56,7 +56,7 @@
  }
 
  div#leftcolumn {
-  padding-top: 30px
+  padding-top: 10px
  }
 
  #notice {
@@ -64,4 +64,19 @@
   text-align: center;
   background-color: rgb(238, 237, 237);
   margin: 20px;
+ }
+
+ ul#leftmenu {
+  list-style-type: none;
+ }
+
+ ul#leftmenu li {
+  padding: 10px;
+  font-size: 16px;
+
+  list-style-type: none;
+ }
+
+ ul#leftmenu li a {
+  text-decoration: none;
  }
