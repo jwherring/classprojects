@@ -26,7 +26,7 @@
     <div id="loginheader" class="span-24">
       <div id="logintaskbar" class="span-8 push-16">
         <% if current_user %>
-          Logged in as <%= current_user.email %>.
+          Logged in as <%= current_user.full_name %>.
           <%= link_to "Log out", session_path("current"), method: "delete" %>
         <% else %>
           <%= link_to "Sign up", new_user_path %> or 
