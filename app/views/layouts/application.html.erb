@@ -24,11 +24,13 @@
   
   <div class="container">
     <div id="loginheader" class="span-24">
-      <div id="logintaskbar" class="span-4 push-20">
+      <div id="logintaskbar" class="span-8 push-16">
         <% if current_user %>
-          <%= link_to "Log out", new_user_path %>
+          Logged in as <%= current_user.email %>.
+          <%= link_to "Log out", session_path("current"), method: "delete" %>
         <% else %>
-          <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Sign up", new_user_path %> or 
+          <%= link_to "Log in", new_session_path %>
         <% end %>
       </div>
     </div>
