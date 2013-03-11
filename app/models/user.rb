@@ -7,4 +7,10 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_roles, :allow_destroy => true
   validates_uniqueness_of :email
   has_secure_password
+
+  def isadmin?
+    my_roles = self.roles.map{ |rl| rl.role }
+    my_roles.include?(:administrator)
+  end
+
 end
