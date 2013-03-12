@@ -10,7 +10,11 @@
 <h3>Comment</h3>
 <p>
   <strong>User:</strong>
-  <%= @evaluation.user.full_name %>
+  <% if is_admin %>
+    <%= link_to @evaluation.user.full_name, user_path(@evaluation.user) %>
+  <% else %>
+    <%= @evaluation.user.full_name %>
+  <% end %>
 </p>
 
 <p>
