@@ -1,0 +1,6 @@
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<% if is_admin %>
+  <%= link_to 'All Comments', evaluations_path %>
+<% else %>
+  <%= link_to 'My Comments', evaluations_path %>
+<% end %>

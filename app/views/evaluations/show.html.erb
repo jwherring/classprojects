@@ -1,4 +1,11 @@
+<div id="leftcolumn" class="span-7">
+<%= render 'shared/menu' %>
+</div>
+
+<div id="maincontent" class="span-15 push-2">
+<% if notice %>
 <p id="notice"><%= notice %></p>
+<% end %>
 
 <p>
   <strong>User:</strong>
@@ -21,5 +28,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
-<%= link_to 'Back', evaluations_path %>
+<%= render 'footerlinks' %>
