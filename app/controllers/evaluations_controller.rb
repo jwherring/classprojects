@@ -78,7 +78,7 @@ class EvaluationsController < ApplicationController
     end
 
     def has_permission
-      current_user.isadmin? || @evaluation.users.include?(current_user)
+      current_user.isadmin? || @evaluation.user == current_user
     end
 
     helper_method :has_permission

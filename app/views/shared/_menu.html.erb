@@ -2,6 +2,11 @@
 <ul id="leftmenu" class="pull-2">
   <li><%= link_to "All Courses", courses_path %></li>
   <li><%= link_to "All Projects", projects_path %></li>
+  <% if is_admin %>
+    <li><%= link_to "All Comments", evaluations_path %></li>
+  <% elsif current_user %>
+    <li><%= link_to "My Comments", evaluations_path %></li>
+  <% end %>
   <% Course.all.each do |cs| %>
     <li><%= link_to "#{cs.section} - #{cs.title}", course_path(cs) %></li>
   <% end %>
