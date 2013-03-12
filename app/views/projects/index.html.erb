@@ -3,11 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th><%= link_to "Title", :sort => "title" %></th>
+      <th><%= link_to "Title", {:sort => "title"}, :class => "sortheader" %></th>
       <th>Abstract</th>
-      <th><%= link_to "Course", :sort => "course" %></th>
-      <th><%= link_to "Comments", :sort => "comments" %></th>
-      <th><%= link_to "Average Rating", :sort => "average_rating" %></th>
+      <th><%= link_to "Course", {:sort => "course"}, :class=> "sortheader" %></th>
+      <th><%= link_to "Comments", {:sort => "comments"}, :class=> "sortheader" %></th>
+      <th><%= link_to "Average Rating", {:sort => "average_rating"}, :class=> "sortheader" %></th>
       <th></th>
     </tr>
   </thead>

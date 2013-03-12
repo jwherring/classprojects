@@ -130,3 +130,8 @@
  .commenter {
   font-size: 18px;
  }
+
+ a.sortheader {
+  text-decoration: none;
+  color: #000;
+ }
