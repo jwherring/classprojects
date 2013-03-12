@@ -137,3 +137,15 @@
   text-decoration: none;
   color: #000;
  }
+
+ h1.maintitle a.featurelesslink {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+ }
+
+ h1.maintitle a.featurelesslink:visited {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+ }
