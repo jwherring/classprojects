@@ -1,5 +1,6 @@
 
 <ul id="leftmenu" class="pull-2">
+  <li><%= link_to "All Courses", courses_path %></li>
   <li><%= link_to "All Projects", projects_path %></li>
   <% Course.all.each do |cs| %>
     <li><%= link_to "#{cs.section} - #{cs.title}", course_path(cs) %></li>
