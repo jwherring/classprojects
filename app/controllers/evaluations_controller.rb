@@ -19,9 +19,14 @@ class EvaluationsController < ApplicationController
 
   # GET /evaluations/new
   def new
-    @evaluation = Evaluation.new
-    @evaluation.user_id = current_user.id
-    @evaluation.project_id = params[:project_id]
+    previous = Evaluation.find_by_user_id_and_project_id(current_user.id, params[:project_id])
+    if previous
+      redirect_to edit_evaluation_path(previous)
+    else
+      @evaluation = Evaluation.new
+      @evaluation.user_id = current_user.id
+      @evaluation.project_id = params[:project_id]
+    end
   end
 
   # GET /evaluations/1/edit
