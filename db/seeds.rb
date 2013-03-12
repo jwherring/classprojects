@@ -163,12 +163,12 @@ Project.create(
     },
     {
       title: 'Intraix iOS App',
-      abstract: 'Our aim is to build a mobile application based on the energy monitoring & conservation project - “Intraix” on the iOS platform, specifically for the iPhone. The purpose of the Intraix Mobile Application (“The App”) is threefold, to Inform, Educate and Reward.  First, we seek to inform our users by providing them with information about their monthly energy usage, this will be achieved by tapping on the infrastructure Intraix has already built to support their website. Second, we want to educate the users by providing them with quick tips and resources about energy saving, curated by us and the Intraix team. Finally, we will reward users through a gamification system that is based on a challenge and achievement system.',
+      abstract: 'Our aim is to build a mobile application based on the energy monitoring & conservation project - Intraix on the iOS platform, specifically for the iPhone. The purpose of the Intraix Mobile Application (The App) is threefold, to Inform, Educate and Reward.  First, we seek to inform our users by providing them with information about their monthly energy usage, this will be achieved by tapping on the infrastructure Intraix has already built to support their website. Second, we want to educate the users by providing them with quick tips and resources about energy saving, curated by us and the Intraix team. Finally, we will reward users through a gamification system that is based on a challenge and achievement system.',
       course_id: 1
     },
     {
       title: 'Axis Toggle',
-      abstract: 'Technology has changed the lives of billions. It has changed the way we track money, the way to do business and even the way we live our lives. There was a period, just a couple of decades ago where we wished we had more control over numerous aspects in life, and today, as technology advances, the gap between human and computer is shrinking and people are loving it.  In developing countries, the Internet and Mobile Internet penetration rates are rising, thus showing a huge opportunity in this area. Consumers in such areas are likely to adopt a higher standard of living and to enjoy more luxurious lifestyle, therefore, besides just satisfying their basic needs, it has to be done in the simplest, most convenient and with the best user experience ever.  There is a need in controlling the use of our daily electronic appliances. Consumers are paying for electricity that they did not use due to their carelessness, insensitivity to energy-consumptionor the inconvenience of turning off the switches one by one. Besides hurting their wallets, the environment is suffering as well.  The solution is a one-stop electrical appliance control and monitoring platform that is designed to fit its users’ lifestyles seamlessly. It consist of both hardware and software integration that encompasses a huge portion of the daily lives of millions of people living in both developing and developed cities.',
+      abstract: "Technology has changed the lives of billions. It has changed the way we track money, the way to do business and even the way we live our lives. There was a period, just a couple of decades ago where we wished we had more control over numerous aspects in life, and today, as technology advances, the gap between human and computer is shrinking and people are loving it.  In developing countries, the Internet and Mobile Internet penetration rates are rising, thus showing a huge opportunity in this area. Consumers in such areas are likely to adopt a higher standard of living and to enjoy more luxurious lifestyle, therefore, besides just satisfying their basic needs, it has to be done in the simplest, most convenient and with the best user experience ever.  There is a need in controlling the use of our daily electronic appliances. Consumers are paying for electricity that they did not use due to their carelessness, insensitivity to energy-consumptionor the inconvenience of turning off the switches one by one. Besides hurting their wallets, the environment is suffering as well.  The solution is a one-stop electrical appliance control and monitoring platform that is designed to fit its users' lifestyles seamlessly. It consist of both hardware and software integration that encompasses a huge portion of the daily lives of millions of people living in both developing and developed cities.",
       course_id: 1
     },
     {
@@ -188,7 +188,7 @@ Project.create(
     },
     {
       title: 'Hush',
-      abstract: 'Anonymity is a vital underpinning of the right to free speech. It is a trivially known fact that humans are often silenced by the ramifications of harboring an unpopular opinion be they due to the reactions of governance bodies, or of a more informal nature from friends, family and the like. Even worse is the anticipatory self-censorship that we often engage in, in light of even the possibility of said ramifications. Therefore, there’s a necessity for an anonymous platform to discuss numerous topics. Or for that matter, even to air certain opinions about a number of topics. We have named our app “Hush” and the name itself is self-explanatory. It provides a platform for you to discuss any topic with the assurance that no one is going to silence you or pose a danger to you for doing so. With “Hush” we hope to revolutionise online sharing. No barriers. No restrains. Anonymous.',
+      abstract: "Anonymity is a vital underpinning of the right to free speech. It is a trivially known fact that humans are often silenced by the ramifications of harboring an unpopular opinion be they due to the reactions of governance bodies, or of a more informal nature from friends, family and the like. Even worse is the anticipatory self-censorship that we often engage in, in light of even the possibility of said ramifications. Therefore, there's a necessity for an anonymous platform to discuss numerous topics. Or for that matter, even to air certain opinions about a number of topics. We have named our app Hush and the name itself is self-explanatory. It provides a platform for you to discuss any topic with the assurance that no one is going to silence you or pose a danger to you for doing so. With Hush we hope to revolutionise online sharing. No barriers. No restrains. Anonymous.",
       course_id: 1
     },
     {
@@ -213,12 +213,12 @@ Project.create(
     },
     {
       title: "The Last Stand",
-      abstract: " This game has been designed for students who want to escape from all the tension in school! With assignments, mid term papers, final paper and projects piling, this game is created with the intention for students to ‘vent’ in a virtual environment. Imagine that you are trapped in school and you have to fight your way out. Destroy all assignments that comes your way and hopefully you will have a chance for survival!",
+      abstract: " This game has been designed for students who want to escape from all the tension in school! With assignments, mid term papers, final paper and projects piling, this game is created with the intention for students to 'vent' in a virtual environment. Imagine that you are trapped in school and you have to fight your way out. Destroy all assignments that comes your way and hopefully you will have a chance for survival!",
       course_id: 2
     },
     {
       title: "Max Out!",
-      abstract: "Max is out, fighting to save the world. Help him fend off enemies or else he will be the one who’s out. Complete all levels and Max will be out-of-this-world AMAZING!  This game is a tower defence game, which combines puzzles and actions to provide the players a unique gaming experience. In each level, the  monsters will charge towards the player. To kill them, the player has to  solve the puzzles present on each monster, which comes in various forms such as math equations, before the monsters reach the player.",
+      abstract: "Max is out, fighting to save the world. Help him fend off enemies or else he will be the one who's out. Complete all levels and Max will be out-of-this-world AMAZING!  This game is a tower defence game, which combines puzzles and actions to provide the players a unique gaming experience. In each level, the  monsters will charge towards the player. To kill them, the player has to  solve the puzzles present on each monster, which comes in various forms such as math equations, before the monsters reach the player.",
       course_id: 2
     },
     {
@@ -233,12 +233,12 @@ Project.create(
     },
     {
       title: "Bear Run",
-      abstract: " Bear Run is an exciting and thrilling action-packed runner-chaser game with the two bears starting off at different locations. As the Brown bear searches the village for resources and collects them, the Black bear tries to catch the Brown bear. The Brown bear will have to exercise caution while gathering resources and at the same time, look out for the Black Bear. Players get to choose to play as the Brown bear, the runner, or the Black bear, the catcher, to experience the different thrills of chasing and being chased. So what are you waiting for? Let’s get Bear running!",
+      abstract: " Bear Run is an exciting and thrilling action-packed runner-chaser game with the two bears starting off at different locations. As the Brown bear searches the village for resources and collects them, the Black bear tries to catch the Brown bear. The Brown bear will have to exercise caution while gathering resources and at the same time, look out for the Black Bear. Players get to choose to play as the Brown bear, the runner, or the Black bear, the catcher, to experience the different thrills of chasing and being chased. So what are you waiting for? Let's get Bear running!",
       course_id: 2
     },
     {
       title: "TheElite6",
-      abstract: " TheElite6 is an Action-Strategy Shoot-em up game, where you take control of a small squad from a top-down view to fulfill objectives in the game. The challenge in the game is to effectively use the position and the classes of the squad to the player’s advantage and employ stealth or otherwise confrontational strategies to engage the enemies while ensuring minimal casualties.",
+      abstract: " TheElite6 is an Action-Strategy Shoot-em up game, where you take control of a small squad from a top-down view to fulfill objectives in the game. The challenge in the game is to effectively use the position and the classes of the squad to the player's advantage and employ stealth or otherwise confrontational strategies to engage the enemies while ensuring minimal casualties.",
       course_id: 2
     },
     {
@@ -258,7 +258,7 @@ Project.create(
     },
     {
       title: "2012 - After Story",
-      abstract: " In this game, our hero/heroine have survived a disaster occurred at 2012 12.21, but lost his/her consciousness. In his/her “dream” there is a voice telling him/her that he/she is still alive after the great disaster. This voice will continue to ask him/her several questions, which will decide our main character’s starting ability and status. Then the voice tell him/her it’s time to wake up, then the main character is back to life. He/She can see that the world has become a ruin. With very little hope, he/she decides to rebuild a village. When exploring the map, the character may save other survivors and bring them back to construct the village together. But during the great disaster, various of monsters are brought to earth. So the road to reconstruct may not be so easy.",
+      abstract: " In this game, our hero/heroine have survived a disaster occurred at 2012 12.21, but lost his/her consciousness. In his/her dream there is a voice telling him/her that he/she is still alive after the great disaster. This voice will continue to ask him/her several questions, which will decide our main character's starting ability and status. Then the voice tell him/her it's time to wake up, then the main character is back to life. He/She can see that the world has become a ruin. With very little hope, he/she decides to rebuild a village. When exploring the map, the character may save other survivors and bring them back to construct the village together. But during the great disaster, various of monsters are brought to earth. So the road to reconstruct may not be so easy.",
       course_id: 2
     },
     {
@@ -267,7 +267,7 @@ Project.create(
       course_id: 2
     },
     {
-      title: "School’s Out!",
+      title: "School's Out!",
       abstract: " Homework! Homework and more homework! George and his schoolmates are trapped in a school of relentless teachers giving never ending homework. He has had enough and plans to sneak out of school before he is piled to death by the ever growing tower of homework.",
       course_id: 2
     },
@@ -288,7 +288,7 @@ Project.create(
     },
     {
       title: "GOTCHA",
-      abstract: " Gotcha is a game where you have to escape from different scenarios. In the different levels there will be different kinds of “guards” trying to catch you and lots of obstacles in your way. Within a time limit you have to escape and get as many points on the way as possible. You also have to watch out for nosy people who wants to tell on you or bribe them before they cry out.",
+      abstract: " Gotcha is a game where you have to escape from different scenarios. In the different levels there will be different kinds of 'guards' trying to catch you and lots of obstacles in your way. Within a time limit you have to escape and get as many points on the way as possible. You also have to watch out for nosy people who wants to tell on you or bribe them before they cry out.",
       course_id: 2
     },
     {
@@ -318,7 +318,7 @@ Project.create(
     },
     {
       title: 'Bedridden Boredom',
-      abstract: "“Science shows that you can die from boredom, literally”. - And what can be more boring than being bedridden in a hospital? Our team plans to tackle this problem with our easily accessible tablet-based application designed for the elderly. We will be focusing on 3 main categories. Our first category is Games, which are responsible for keeping their minds active and alert. Next is Current Affairs, to help the user remain up-to-date with the latest news and issues. Finally, we will allow them to easily connect and communicate with their loved ones via our specialized chat application.",
+      abstract: "'Science shows that you can die from boredom, literally'. - And what can be more boring than being bedridden in a hospital? Our team plans to tackle this problem with our easily accessible tablet-based application designed for the elderly. We will be focusing on 3 main categories. Our first category is Games, which are responsible for keeping their minds active and alert. Next is Current Affairs, to help the user remain up-to-date with the latest news and issues. Finally, we will allow them to easily connect and communicate with their loved ones via our specialized chat application.",
       course_id: 3
     },
     {
@@ -333,7 +333,7 @@ Project.create(
     },
     {
       title: 'Tour Itinery Planner',
-      abstract: "Nowadays, people often like to travel overseas during holiday and festive seasons. However, due to insufficient information gathered from their part, they had to travel down to the tour agencies for more information and ticket booking. This results in more monetary costs from the tourists’ point of view due to the extra money paid for the middlemen services. The users may also feel frustrated if they do research by themselves instead of relying on the agencies, since information from the Internet is scattered. With our implemented idea, the application can help to save the users’ time and money as most of the information regarding the designated tour area is centralised in it, thus enhancing convenience and usability.",
+      abstract: "Nowadays, people often like to travel overseas during holiday and festive seasons. However, due to insufficient information gathered from their part, they had to travel down to the tour agencies for more information and ticket booking. This results in more monetary costs from the tourists' point of view due to the extra money paid for the middlemen services. The users may also feel frustrated if they do research by themselves instead of relying on the agencies, since information from the Internet is scattered. With our implemented idea, the application can help to save the users' time and money as most of the information regarding the designated tour area is centralised in it, thus enhancing convenience and usability.",
       course_id: 3
     },
     {

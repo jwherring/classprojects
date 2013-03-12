@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20130310153848) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "abstract"
-    t.string   "website"
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
