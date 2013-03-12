@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
     when "average_rating"
       @projects = Project.all.sort_by{|i| i.average_rating }
     else
+      @projects = Project.order("title")
     end
   end
 
