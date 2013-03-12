@@ -1,0 +1,6 @@
+
+<ul id="leftmenu" class="pull-2">
+  <% Course.all.each do |cs| %>
+    <li><%= link_to "#{cs.section} - #{cs.title}", course_path(cs) %></li>
+  <% end %>
+</ul>
