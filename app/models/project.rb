@@ -10,6 +10,10 @@ class Project < ActiveRecord::Base
     ((self.evaluations.map{|ev| ev.rating}.sum) * 1.0 / self.evaluations.count).round(2)
   end
 
+  def authors_list
+    self.users.map{|us| us.full_name }.join(', ')
+  end
+
   private
 
   def ensure_not_referenced_by_any_project_participant

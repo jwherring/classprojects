@@ -8,6 +8,7 @@
   <% end %>
   
   <h1><%= @project.title %></h1>
+  <h2>by <%= @project.authors_list %></h2>
 
   <div class="commentsbar">
     <strong>Comments</strong>: <%= @project.evaluations.count %>&nbsp;&nbsp;<strong>Average Rating</strong>: <%= @project.average_rating %>
@@ -18,9 +19,9 @@
   </div>
 
 
-  <div id="linkspanel">
+  <div class="linkspanel">
     <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
+    <%= link_to 'Back', projects_path %> |
     <%= link_to 'Comment', new_evaluation_path %>
   <div>
 
