@@ -8,5 +8,9 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @evaluation %> |
-<%= link_to 'My Comments', evaluations_path %>
+<% is_admin %>
+  <%= link_to 'All Comments', evaluations_path %>
+<% else %>
+  <%= link_to 'My Comments', evaluations_path %>
+<% end %>
 </div>
