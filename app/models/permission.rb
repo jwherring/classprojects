@@ -10,6 +10,7 @@ class Permission < Struct.new(:user)
         return true
       else
         return true if controller == "projects" && action.in?(%w[new edit update])
+        return true if controller == "users" && action.in?(%w[edit update])
       end
     end
   end
