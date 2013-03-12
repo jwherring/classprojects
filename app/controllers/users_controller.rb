@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_filter :is_owner, only: [:edit, :update, :destroy]
+  before_filter :is_owner, only: [:edit, :update, :destroy, :show]
 
   # GET /users
   # GET /users.json
