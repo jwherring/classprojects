@@ -7,14 +7,15 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<h3>Comment</h3>
 <p>
   <strong>User:</strong>
-  <%= @evaluation.user_id %>
+  <%= @evaluation.user.full_name %>
 </p>
 
 <p>
   <strong>Project:</strong>
-  <%= @evaluation.project_id %>
+  <%= link_to @evaluation.project.title, project_path(@evaluation.project) %>
 </p>
 
 <p>
