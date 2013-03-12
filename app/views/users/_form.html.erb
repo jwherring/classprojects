@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.select :location, options_for_select(['Asia', 'North America', 'South America', 'Europe', 'Africa', 'Australia', 'Antarctica']) %>
   </div>
 
   <div class="field">
