@@ -3,7 +3,6 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :title
       t.text :abstract
-      t.string :website
       t.integer :course_id
 
       t.timestamps
