@@ -32,6 +32,10 @@
     <%= @user.roles.map{ |rl| rl.role }.join(', ') %>
   </p>
   
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
+  <% if is_admin %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'All Users', users_path %>
+  <% else %>
+    <%= link_to 'My Profile', edit_user_path(@user) %> |
+  <% end %>
 </div>
