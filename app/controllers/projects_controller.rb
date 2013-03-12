@@ -4,7 +4,17 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    case params[:sort]
+    when "title"
+      @projects = Project.order("title")
+    when "course"
+      @projects = Project.all.sort_by{|i| i.course.full_title }
+    when "comments"
+      @projects = Project.all.sort_by{|i| i.evaluations.count }
+    when "average_rating"
+      @projects = Project.all.sort_by{|i| i.average_rating }
+    else
+    end
   end
 
   # GET /projects/1

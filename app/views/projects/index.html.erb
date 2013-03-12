@@ -3,11 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= link_to "Title", :sort => "title" %></th>
       <th>Abstract</th>
-      <th>Course</th>
-      <th></th>
-      <th></th>
+      <th><%= link_to "Course", :sort => "course" %></th>
+      <th><%= link_to "Comments", :sort => "comments" %></th>
+      <th><%= link_to "Average Rating", :sort => "average_rating" %></th>
       <th></th>
     </tr>
   </thead>
@@ -15,12 +15,16 @@
   <tbody>
     <% @projects.each do |project| %>
     <tr>
-      <td><%= project.title %></td>
+      <td><%= link_to project.title, project %></td>
       <td><%= project.abstract %></td>
-      <td><%= project.course.section %></td>
-      <td><%= link_to 'Show', project %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to project.course.section, project.course %></td>
+      <td><%= project.evaluations.count %></td>
+      <td><%= project.average_rating %></td>
+      <td>
+        <% if is_admin %>
+          <%= link_to 'Remove', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </tbody>
