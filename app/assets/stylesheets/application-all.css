@@ -101,3 +101,32 @@
   padding-left: 8px;
   padding-right: 8px;
  }
+
+ div#commentsbox {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding: 10px;
+  border: 1px solid;
+ }
+
+ div.usercomment-even {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(213, 213, 213);
+ }
+
+ div.usercomment-odd {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(243, 243, 243);
+ }
+
+ div.usercomment p {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+ }
+ .commenter {
+  font-size: 18px;
+ }

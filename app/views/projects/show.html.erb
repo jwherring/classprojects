@@ -8,7 +8,11 @@
   <% end %>
   
   <h1><%= @project.title %></h1>
-  <h2>by <%= @project.authors_list %></h2>
+  <% if @project.users.count > 0 %>
+    <h2>by <%= @project.authors_list %></h2>
+  <% else %>
+    <h3>(participants unknown or not registered)</h3>
+  <% end %>
 
   <div class="commentsbar">
     <strong>Comments</strong>: <%= @project.evaluations.count %>&nbsp;&nbsp;<strong>Average Rating</strong>: <%= @project.average_rating %>
@@ -24,5 +28,20 @@
     <%= link_to 'Back', projects_path %> |
     <%= link_to 'Comment', new_evaluation_path %>
   <div>
+
+
+  <div id="commentsbox">
+    <h3>Comments</h3>
+    <% @project.sorted_evaluations_descending.each do |ev| %>
+      <div class="usercomment <%= cycle('usercomment-even', 'usercomment-odd')%>">
+        <p>
+          <strong>Rating:</strong> <%= ev.rating %>
+        </p>
+        <p>
+          <strong><span class="commenter"><%= ev.user.full_name %></span></strong> says <%= ev.comment %>
+        </p>
+      </div>
+    <% end %>
+  </div>
 
 </div>

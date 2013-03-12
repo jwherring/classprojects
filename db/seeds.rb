@@ -401,3 +401,16 @@ Project.all.each do |pj|
     end
   end
 end
+
+Project.all.each do |pj|
+  User.all.each do |us|
+    if (rand(9) % 3) == 0
+      ProjectParticipant.create(
+        {
+          user_id: us.id,
+          project_id: pj.id
+        }
+      )
+    end
+  end
+end

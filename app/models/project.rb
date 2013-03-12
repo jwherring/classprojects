@@ -14,6 +14,14 @@ class Project < ActiveRecord::Base
     self.users.map{|us| us.full_name }.join(', ')
   end
 
+  def sorted_evaluations_descending
+    self.evaluations.sort_by{|i| i.rating }.reverse
+  end
+
+  def sorted_evaluations_ascending
+    self.evaluations.sort_by{|i| i.rating }
+  end
+
   private
 
   def ensure_not_referenced_by_any_project_participant
