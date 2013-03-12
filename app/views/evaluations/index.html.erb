@@ -3,7 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <% if is_admin %>
+        <th>User</th>
+      <% end %>
       <th>Project</th>
       <th>Comment</th>
       <th>Rating</th>
@@ -16,8 +18,10 @@
   <tbody>
     <% @evaluations.each do |evaluation| %>
     <tr>
-      <td><%= evaluation.user_id %></td>
-      <td><%= evaluation.project_id %></td>
+      <% if is_admin %>
+        <td><%= evaluation.user_id %></td>
+      <% end %>
+      <td><%= link_to evaluation.project.title, project_path(evaluation.project) %></td>
       <td><%= evaluation.comment %></td>
       <td><%= evaluation.rating %></td>
       <td><%= link_to 'Show', evaluation %></td>
@@ -27,7 +31,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New Evaluation', new_evaluation_path %>

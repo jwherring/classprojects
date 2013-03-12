@@ -1,10 +1,11 @@
 class EvaluationsController < ApplicationController
   before_action :set_evaluation, only: [:show, :edit, :update, :destroy]
+  before_filter :is_owner, only: [:show, :edit, :update, :destroy]
 
   # GET /evaluations
   # GET /evaluations.json
   def index
-    @evaluations = Evaluation.all
+    @evaluations = Evaluation.where("user_id = ?", current_user.id)
   end
 
   # GET /evaluations/1
@@ -70,5 +71,17 @@ class EvaluationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def evaluation_params
       params.require(:evaluation).permit(:user_id, :project_id, :comment, :rating)
+    end
+
+    def has_permission
+      current_user.isadmin? || @evaluation.users.include?(current_user)
+    end
+
+    helper_method :has_permission
+
+    def is_owner
+      if !has_permission
+        redirect_to root_url, notice: "Not authorized."
+      end
     end
 end
