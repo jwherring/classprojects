@@ -19,66 +19,77 @@ User.create(
     {
       first_name: 'Admin',
       last_name: 'User',
+      location: 'Asia',
       email: 'mail1@mail.com',
       password: 'test'
     },
     {
       first_name: 'Student',
       last_name: 'User',
+      location: 'Asia',
       email: 'mail2@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '1',
+      location: 'Asia',
       email: 'mail3@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '2',
+      location: 'Asia',
       email: 'mail4@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '3',
+      location: 'Asia',
       email: 'mail5@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '4',
+      location: 'Asia',
       email: 'mail6@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '5',
+      location: 'Asia',
       email: 'mail7@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '6',
+      location: 'Asia',
       email: 'mail8@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '7',
+      location: 'Asia',
       email: 'mail9@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '8',
+      location: 'Asia',
       email: 'mail10@mail.com',
       password: 'test'
     },
     {
       first_name: 'StudentUser',
       last_name: '9',
+      location: 'Asia',
       email: 'mail11@mail.com',
       password: 'test'
     }
