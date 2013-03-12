@@ -13,7 +13,10 @@
       <% cs.projects.each do |pj| %>
         <div class="span-16 push-1">
           <p>
-            <strong><span class="projecttitle"><%= link_to pj.title, project_path(pj.id) %></span></strong>  - <%= pj.abstract %> <br/>
+            <strong><span class="projecttitle"><%= link_to pj.title, project_path(pj.id) %></span></strong>  - <%= pj.abstract %> 
+            <p>
+            This project has <%= pj.evaluations.count %> comments with an average score of <%= pj.average_rating %>.
+            </p>
           </p>
         </div>
       <% end %>
