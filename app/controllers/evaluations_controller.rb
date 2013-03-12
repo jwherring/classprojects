@@ -5,7 +5,11 @@ class EvaluationsController < ApplicationController
   # GET /evaluations
   # GET /evaluations.json
   def index
-    @evaluations = Evaluation.where("user_id = ?", current_user.id)
+    if current_user.isadmin?
+      @evaluations = Evaluation.all
+    else
+      @evaluations = Evaluation.where("user_id = ?", current_user.id)
+    end
   end
 
   # GET /evaluations/1

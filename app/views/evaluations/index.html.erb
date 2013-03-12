@@ -1,4 +1,9 @@
-<h1>Listing evaluations</h1>
+<% if is_admin %>
+  <h1>All Comments</h1>
+<% else %>
+  <h1>Your Comments</h1>
+<% end %>
+
 
 <table>
   <thead>
