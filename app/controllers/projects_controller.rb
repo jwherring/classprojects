@@ -17,6 +17,9 @@ class ProjectsController < ApplicationController
     else
       @projects = Project.order("title")
     end
+    if params[:sort_order] == 'desc'
+      @projects = @projects.reverse
+    end
   end
 
   # GET /projects/1

@@ -1,13 +1,13 @@
-<h1>Listing projects</h1>
+<h1>Project Listings</h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= link_to "Title", {:sort => "title"}, :class => "sortheader" %></th>
+      <th><%= sortable "title" %></th>
       <th>Abstract</th>
-      <th><%= link_to "Course", {:sort => "course"}, :class=> "sortheader" %></th>
-      <th><%= link_to "Comments", {:sort => "comments"}, :class=> "sortheader" %></th>
-      <th><%= link_to "Average Rating", {:sort => "average_rating"}, :class=> "sortheader" %></th>
+      <th><%= sortable "course" %></th>
+      <th><%= sortable "comments" %></th>
+      <th><%= sortable "average_rating" %></th>
       <th></th>
     </tr>
   </thead>
