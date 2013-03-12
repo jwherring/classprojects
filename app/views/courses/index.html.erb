@@ -15,7 +15,7 @@
   <tbody>
     <% @courses.each do |course| %>
     <tr>
-      <td><%= course.title %></td>
+      <td><%= link_to course.title, course %></td>
       <td><%= link_to course.section, course %></td>
       <% if is_admin %>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
