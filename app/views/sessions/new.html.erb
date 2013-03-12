@@ -2,6 +2,12 @@
 </div>
 
 <div id="maincontent" class="span-15 push-1">
+<% if notice %>
+  <div id="notice">
+    <%= notice %>
+  </div>
+<% end %>
+
 <h1>Log In</h1>
 
 <%= form_tag sessions_path do %>
