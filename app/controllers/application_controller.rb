@@ -20,4 +20,6 @@ private
   def authorize
     redirect_to login_url if current_user.nil?
   end
+
+  helper_method :authorize
 end
