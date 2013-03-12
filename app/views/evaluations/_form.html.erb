@@ -18,12 +18,11 @@
     </div>
   <% else %>
     <div class="field">
-      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :user_id, :value => @evaluation.user_id %>
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :project_id %><br />
-    <%= f.number_field :project_id %>
+    <%= f.hidden_field :project_id, :value => @evaluation.project_id %>
   </div>
   <div class="field">
     <%= f.label :comment %><br />
