@@ -42,6 +42,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    disable_password_confirmation_if_admin
     respond_to do |format|
       if params[:user][:roles]
         @user.roles = params[:user][:roles].map{|rid| Role.find(rid)}
@@ -88,6 +89,14 @@ class UsersController < ApplicationController
     def is_owner
       if !has_permission
         redirect_to root_url, notice: "Not authorized."
+      end
+    end
+
+    def disable_password_confirmation_if_admin
+      if current_user && current_user.isadmin?
+        if !params[:user][:password].present?
+          params[:user][:password_confirmation] = nil
+        end
       end
     end
 end
