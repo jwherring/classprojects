@@ -37,7 +37,7 @@
       <div class="usercomment <%= cycle('usercomment-even', 'usercomment-odd')%>">
         <p>
           <strong>Rating:</strong> <%= ev.rating %>
-          <% if ev.user_id == current_user.id %>
+          <% if current_user && (ev.user_id == current_user.id) %>
             <%= link_to "Edit", edit_evaluation_path(ev) %>
           <% end %>
         </p>

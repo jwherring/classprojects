@@ -87,7 +87,7 @@ class ProjectsController < ApplicationController
     end
 
     def has_permission
-      current_user.isadmin? || @project.users.include?(current_user)
+      (current_user.isadmin? || @project.users.include?(current_user)) if current_user
     end
 
     helper_method :has_permission
