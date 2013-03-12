@@ -25,7 +25,7 @@
 
   <div class="linkspanel">
     <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Comment', new_evaluation_path %>
+    <%= link_to 'Rate this Project', {:controller => "evaluations", :action => "new", :project_id => @project.id} %>
   <div>
 
 
