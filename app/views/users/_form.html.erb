@@ -41,9 +41,11 @@
     <%= f.text_field :password_confirmation %>
   </div>
 
-  <% Role.all.each do |rl| %>
-    <%= label rl.role, rl.role %>
-    <%= check_box_tag "user[roles][]", rl.id, @user.role_ids.include?(rl.id) %>
+  <% if is_admin %>
+    <% Role.all.each do |rl| %>
+      <%= label rl.role, rl.role %>
+      <%= check_box_tag "user[roles][]", rl.id, @user.role_ids.include?(rl.id) %>
+    <% end %>
   <% end %>
 
   <div class="actions">
