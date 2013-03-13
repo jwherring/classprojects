@@ -50,3 +50,7 @@ bundle install
 rake db:create:all
 RAILS_ENV=production rake:db:migrate
 RAILS_ENV=production rake:db:seed
+
+== TESTING AND DOCUMENTATION
+
+Incomplete.  The test suite and rdoc-ready comments consist only of what was provided by Rails scaffolding.  TODO: comment all classes for documentation generation.
