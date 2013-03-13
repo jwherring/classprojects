@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :project %><br />
-    <%= f.select :project, options_for_select(Project.all.map{|pj| [pj.title, pj.id]}, @project_participant.project_id) %>
+    <%= f.select :project_id, options_for_select(Project.all.map{|pj| [pj.title, pj.id]}, @project_participant.project_id) %>
   </div>
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.select :user, options_for_select(User.all.map{|us| [us.full_name, us.id]}, @project_participant.user_id) %>
+    <%= f.select :user_id, options_for_select(User.all.map{|us| [us.full_name, us.id]}, @project_participant.user_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>
