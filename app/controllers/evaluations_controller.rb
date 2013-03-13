@@ -24,8 +24,8 @@ class EvaluationsController < ApplicationController
       redirect_to edit_evaluation_path(previous)
     else
       @evaluation = Evaluation.new
-      @evaluation.user_id = current_user.id
-      @evaluation.project_id = params[:project_id]
+      @evaluation.user = User.find(current_user.id)
+      @evaluation.project = Project.find(params[:project_id])
     end
   end
 

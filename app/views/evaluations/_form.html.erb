@@ -18,7 +18,7 @@
     </div>
   <% else %>
     <div class="field">
-      <%= f.hidden_field :user_id, :value => @evaluation.user_id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
     </div>
   <% end %>
   <div class="field">
