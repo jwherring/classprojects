@@ -10,6 +10,7 @@
 <ul id="leftmenu" class="pull-2">
   <li><%= link_to "All Courses", courses_path %></li>
   <li><%= link_to "All Projects", projects_path %></li>
+  <li><%= link_to "My Projects", :controller => "projects", :action => "index", :limit => true %></li>
   <% if is_admin %>
     <li><%= link_to "All Comments", evaluations_path %></li>
   <% elsif current_user %>
