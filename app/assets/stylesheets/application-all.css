@@ -51,7 +51,12 @@
  }
 
  div#maincontent {
-  padding-top: 30px
+  padding-top: 30px;
+ }
+
+ div#fullwindow {
+  padding-top: 30px;
+  padding-bottom: 30px;
  }
 
  div#leftcolumn {
