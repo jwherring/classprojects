@@ -6,12 +6,12 @@
 
 <p>
   <strong>Project:</strong>
-  <%= link_to @project_participant.project.title, project_path(@project_participant) %>
+  <%= link_to @project_participant.project.title, project_path(@project_participant.project) %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= link_to @project_participant.user.full_name, user_path(@project_participant) %>
+  <%= link_to @project_participant.user.full_name, user_path(@project_participant.user) %>
 </p>
 
 

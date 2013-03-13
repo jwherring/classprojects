@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.select :user, options_for_select(User.all.map{|us| [us.full_name, us.id]}, @project_participant.user_id), :selected => params[:user_id] %>
+    <%= f.select :user, options_for_select(User.all.map{|us| [us.full_name, us.id]}, @project_participant.user_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>

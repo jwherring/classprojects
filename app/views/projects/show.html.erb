@@ -27,6 +27,10 @@
     <% if has_permission %>
       <%= link_to 'Edit', edit_project_path(@project) %> | 
     <% end %>
+    <% if has_permission && !is_admin %>
+      <% project_participant = ProjectParticipant.find_by_project_id_and_user_id(@project.id, current_user.id) %>
+      <%= link_to 'Remove me from thie Project', project_participant_path(project_participant), :method => :delete %> | 
+    <% end %>
     <% if current_user %>
       <%= link_to 'Rate this Project', {:controller => "evaluations", :action => "new", :project_id => @project.id} %>
     <% end %>

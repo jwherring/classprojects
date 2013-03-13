@@ -39,12 +39,22 @@ class ProjectParticipantsController < ApplicationController
     @project_participant = ProjectParticipant.new(project_participant_params)
 
     respond_to do |format|
-      if @project_participant.save
-        format.html { redirect_to @project_participant, notice: 'Project participant was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @project_participant }
+      if is_admin
+        if @project_participant.save
+          format.html { redirect_to @project_participant, notice: 'Project participant was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @project_participant }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @project_participant.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'new' }
-        format.json { render json: @project_participant.errors, status: :unprocessable_entity }
+        if user_owns_project && @project_participant.save
+          format.html { redirect_to projects_path, notice: 'Project participant was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @project_participant }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @project_participant.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -67,9 +77,16 @@ class ProjectParticipantsController < ApplicationController
   # DELETE /project_participants/1.json
   def destroy
     @project_participant.destroy
-    respond_to do |format|
-      format.html { redirect_to project_participants_url }
-      format.json { head :no_content }
+    if is_admin
+      respond_to do |format|
+        format.html { redirect_to project_participants_url }
+        format.json { head :no_content }
+      end
+    else 
+      respond_to do |format|
+        format.html { redirect_to projects_url }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -95,4 +112,9 @@ class ProjectParticipantsController < ApplicationController
         redirect_to root_url, notice: "Not authorized."
       end
     end
+
+    def user_owns_project
+      current_user.in?(Project.find(params[:project_participant][:project]).users)
+    end
+
 end
