@@ -5,6 +5,18 @@ class ProjectParticipantsController < ApplicationController
   # GET /project_participants.json
   def index
     @project_participants = ProjectParticipant.all
+    case params[:sort]
+    when "project"
+      @project_participants = @project_participants.sort_by{|pp| pp.project.title }
+    when "user"
+      @project_participants = @project_participants.sort_by{|pp| pp.user.full_name }
+    else 
+      @project_participants = @project_participants.sort_by{|pp| pp.project.title }
+    end
+    if params[:sort_order] == 'desc'
+      @project_participants = @project_participants.reverse
+    end
+
   end
 
   # GET /project_participants/1

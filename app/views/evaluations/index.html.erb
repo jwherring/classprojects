@@ -9,7 +9,7 @@
   <thead>
     <tr>
       <% if is_admin %>
-        <th>User</th>
+        <th><%= sortable "user" %></th>
       <% end %>
       <th><%= sortable "project" %></th>
       <th>Comment</th>

@@ -11,6 +11,8 @@ class EvaluationsController < ApplicationController
       @evaluations = Evaluation.where("user_id = ?", current_user.id)
     end
     case params[:sort]
+    when "user"
+      @evaluations = @evaluations.sort_by{|ev| ev.user.full_name }
     when "project"
       @evaluations = @evaluations.sort_by{|ev| ev.project.title }
     when "rating"
