@@ -24,7 +24,7 @@
     <% @evaluations.each do |evaluation| %>
     <tr>
       <% if is_admin %>
-        <td><%= evaluation.user_id %></td>
+        <td><%= link_to evaluation.user.full_name, user_path(evaluation.user) %></td>
       <% end %>
       <td><%= link_to evaluation.project.title, project_path(evaluation.project) %></td>
       <td><%= evaluation.comment %></td>
