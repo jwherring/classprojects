@@ -7,7 +7,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @evaluation %> |
+<%= link_to 'Project Page', @evaluation.project %> |
 <% if is_admin %>
   <%= link_to 'All Comments', evaluations_path %>
 <% else %>
