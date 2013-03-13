@@ -1,7 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a demonstration project for the ACL, intended to demonstrate my facility with Rails and data architecture.  It is a mock-up comments system for courses from the National University of Singapore's Computing Term Project Showcase:
+
+http://wing.comp.nus.edu.sg/socProjectShowcase/2012_2013_Sem1/abstracts.html
+
+=USERS
+
+The system recognizes two kinds of user: administrators and students.
 
 Things you may want to cover:
 
