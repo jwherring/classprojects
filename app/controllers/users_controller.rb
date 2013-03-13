@@ -5,7 +5,21 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    case params[:sort]
+    when "first_name"
+      @users = User.order(:first_name)
+    when "last_name"
+      @users = User.order(:last_name)
+    when "email"
+      @users = User.order(:email)
+    when "location"
+      @users = User.order(:location)
+    else
+      @users = User.order(:last_name)
+    end
+    if params[:sort_order] == 'desc'
+      @users = @users.reverse
+    end
   end
 
   # GET /users/1
