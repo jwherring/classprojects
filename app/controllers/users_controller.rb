@@ -6,9 +6,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     case params[:sort]
-    when "first_name"
+    when "first name"
       @users = User.order(:first_name)
-    when "last_name"
+    when "last name"
       @users = User.order(:last_name)
     when "email"
       @users = User.order(:email)
