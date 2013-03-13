@@ -46,12 +46,13 @@ but it will be removed shortly.
 
 The project comes with seed data, and is currently configured to run with sqlite.  Database creation and seeding follows the standard rake pattern:
 
-<tt>
-bundle install
-rake db:create:all
-RAILS_ENV=production rake:db:migrate
-RAILS_ENV=production rake:db:seed
-</tt>
+<tt>bundle install</tt>
+
+<tt>rake db:create:all</tt>
+
+<tt>RAILS_ENV=production rake:db:migrate</tt>
+
+<tt>RAILS_ENV=production rake:db:seed</tt>
 
 == TESTING AND DOCUMENTATION
 
