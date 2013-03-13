@@ -114,7 +114,7 @@ class ProjectParticipantsController < ApplicationController
     end
 
     def user_owns_project
-      current_user.in?(Project.find(params[:project_participant][:project]).users)
+      current_user.in?(Project.find(params[:project_participant][:project_id]).users)
     end
 
 end
