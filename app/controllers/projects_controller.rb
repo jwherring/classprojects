@@ -74,9 +74,17 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    @project.destroy
+    note = nil
+    if has_permission && @project.users.count == 1
+      @project.project_participants.all.each do |pp|
+        pp.destroy
+      end
+      @project.destroy
+    elsif @project.users.count > 1
+      note = "This project has #{@project.users.count} participants. Cannot delete project which has multiple participants."
+    end
     respond_to do |format|
-      format.html { redirect_to projects_url }
+      format.html { redirect_to projects_url, notice: note }
       format.json { head :no_content }
     end
   end
