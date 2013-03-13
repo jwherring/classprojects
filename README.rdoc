@@ -38,11 +38,11 @@ but it will be removed shortly.
 
 == SETUP
 
-Ruby version: 2.0.0-p0 using rbenv
-Rails version: 4.0.0-beta1
-Middleware: Phusion Passenger
-Server: Apache 2.2.2.22
-Dependencies: bcrypt-ruby for the authentication system and therubyracer for Passenger's asset caching, if you are using Passenger
+* Ruby version - 2.0.0-p0 using rbenv
+* Rails version - 4.0.0-beta1
+* Middleware - Phusion Passenger
+* Server - Apache 2.2.2.22
+* Dependencies - bcrypt-ruby for the authentication system and therubyracer for Passenger's asset caching, if you are using Passenger
 
 The project comes with seed data, and is currently configured to run with sqlite.  Database creation and seeding follows the standard rake pattern:
 
