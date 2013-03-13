@@ -83,4 +83,16 @@ class ProjectParticipantsController < ApplicationController
     def project_participant_params
       params.require(:project_participant).permit(:project_id, :user_id)
     end
+
+    def has_permission
+      (current_user.isadmin? || (@project_participant.user == current_user)) if current_user
+    end
+
+    helper_method :has_permission
+
+    def is_owner
+      if !has_permission
+        redirect_to root_url, notice: "Not authorized."
+      end
+    end
 end
