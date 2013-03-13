@@ -12,6 +12,9 @@
   <% elsif current_user %>
     <li><%= link_to "My Profile", edit_user_path(current_user) %></li>
   <% end %>
+  <% if is_admin %>
+    <li><%= link_to "Project Participants", project_participants_path %></li>
+  <% end %>
   <% Course.all.each do |cs| %>
     <li><%= link_to "#{cs.section} - #{cs.title}", course_path(cs) %></li>
   <% end %>
