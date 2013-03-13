@@ -5,6 +5,17 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
+    case params[:sort]
+    when "title"
+      @courses = @courses.sort_by{|cs| cs.title }
+    when "section"
+      @courses = @courses.sort_by{|cs| cs.section }
+    else
+      @courses = @courses.sort_by{|cs| cs.title }
+    end
+    if params[:sort_order] == 'desc'
+      @courses = @courses.reverse
+    end
   end
 
   # GET /courses/1
