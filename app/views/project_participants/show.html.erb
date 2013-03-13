@@ -1,15 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div id="leftcolumn" class="span-7">
+  <%= render 'shared/menu' %>
+</div>
+<div id="maincontent" class="span-15 span-2">
+<h1>Edit Project Participant</h1>
 
 <p>
   <strong>Project:</strong>
-  <%= @project_participant.project %>
+  <%= link_to @project_participant.project.title, project_path(@project_participant) %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @project_participant.user %>
+  <%= link_to @project_participant.user.full_name, user_path(@project_participant) %>
 </p>
 
 
 <%= link_to 'Edit', edit_project_participant_path(@project_participant) %> |
-<%= link_to 'Back', project_participants_path %>
+<%= link_to 'Project Participants', project_participants_path %>
+</div>
