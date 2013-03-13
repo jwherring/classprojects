@@ -20,6 +20,9 @@ class ProjectsController < ApplicationController
     if params[:sort_order] == 'desc'
       @projects = @projects.reverse
     end
+    if params[:limit]
+      @projects = @projects.select{|pj| pj.users.include?(current_user) }
+    end
   end
 
   # GET /projects/1
