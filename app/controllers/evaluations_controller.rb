@@ -10,6 +10,17 @@ class EvaluationsController < ApplicationController
     else
       @evaluations = Evaluation.where("user_id = ?", current_user.id)
     end
+    case params[:sort]
+    when "project"
+      @evaluations = @evaluations.sort_by{|ev| ev.project.title }
+    when "rating"
+      @evaluations = @evaluations.sort_by{|ev| ev.rating }
+    else
+      @evaluations = @evaluations.sort_by{|ev| ev.project.title }
+    end
+    if params[:sort_order] == 'desc'
+      @evaluations = @evaluations.reverse
+    end
   end
 
   # GET /evaluations/1
