@@ -12,5 +12,6 @@
   <%= link_to 'All Comments', evaluations_path %>
 <% else %>
   <%= link_to 'My Comments', evaluations_path %>
-<% end %>
+<% end %> | 
+<%= link_to 'Delete this Comment', @evaluation , :method => :delete %>
 </div>
