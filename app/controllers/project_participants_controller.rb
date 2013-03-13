@@ -49,7 +49,7 @@ class ProjectParticipantsController < ApplicationController
         end
       else
         if user_owns_project && @project_participant.save
-          format.html { redirect_to projects_path, notice: 'Project participant was successfully created.' }
+          format.html { redirect_to @project_participant.project, notice: 'Project participant was successfully created.' }
           format.json { render action: 'show', status: :created, location: @project_participant }
         else
           format.html { render action: 'new' }
