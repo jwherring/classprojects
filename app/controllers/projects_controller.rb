@@ -45,6 +45,9 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     respond_to do |format|
       if @project.save
+        if !is_admin
+          @project.users << current_user
+        end
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render action: 'show', status: :created, location: @project }
       else

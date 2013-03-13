@@ -9,7 +9,7 @@ class Permission < Struct.new(:user)
       if user.isadmin?
         return true
       else
-        return true if controller == "projects" && action.in?(%w[new edit update])
+        return true if controller == "projects" && action.in?(%w[new edit create update])
         return true if controller == "users" && action.in?(%w[edit update show])
         return true if controller == "evaluations" && action.in?(%w[edit update create index show destroy new])
         return true if controller == "project_participants" && action.in?(%w[create destroy new])
